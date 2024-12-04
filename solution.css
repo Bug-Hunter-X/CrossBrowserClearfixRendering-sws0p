@@ -1,0 +1,23 @@
+Several alternative and more robust clearfix methods exist.  Here are two examples:
+
+**Method 1: Using `overflow: auto`:**
+
+```css
+.clearfix {
+  overflow: auto;
+}
+```
+
+This method is often preferred for its simplicity and broad compatibility.
+
+**Method 2: Using `after` pseudo-element with more modern properties:**
+
+```css
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+```
+
+This replaces `display: table` with the simpler `display: block;` while maintaining similar functionality. This is generally well-supported and less likely to cause problems.  Choose the method that best suits your project's needs and browser compatibility requirements.
