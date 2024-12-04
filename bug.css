@@ -1,0 +1,18 @@
+The following CSS code snippet exhibits unexpected behavior in certain browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ... rest of the CSS ... */
+```
+
+The `clearfix` hack, while common, can cause issues with some layout engines and older browsers.  The issue isn't always apparent, but might manifest as unexpected collapsing of floated elements or incorrect positioning.  The `display: table` approach, in particular, can lead to subtle rendering differences.
